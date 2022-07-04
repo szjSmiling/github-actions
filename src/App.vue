@@ -5,8 +5,9 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  前端项目使用 github actions 自动化部署
   <img alt="Vue logo" src="./assets/logo.png" />
+  <br>
+  前端项目使用 github actions 自动化部署
   <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
