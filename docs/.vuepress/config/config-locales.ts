@@ -18,7 +18,7 @@ export const themeLocalesCommon = {
   docsDir: 'docs',
   logo: '/images/hero.png',
   editLink: false,
-  repo: 'https://github.com/vuejs/vuepress',
+  repo: 'https://github.com/szjSmiling/github-actions/',
   // repoLabel: 'GitHub',
 }
 // 主题 locales 配置
