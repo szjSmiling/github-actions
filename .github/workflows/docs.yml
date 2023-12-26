@@ -23,7 +23,7 @@ jobs:
     steps:
     # 下载源码, 切分支
     - name: checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         # 最近的一个版本
         fetch-depth: 0
