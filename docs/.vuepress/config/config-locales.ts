@@ -27,6 +27,11 @@ export const themeLocales = {
     selectLanguageText: '选择语言',
     selectLanguageAriaLabel: '选择语言',
     navbar: navbar.zh, // 导航栏
+    // 仓库设置
+    contributors: true,
+    editLinkText: '在 GitHub 上编辑此页',
+    contributorsText: '贡献者',
+    lastUpdatedText: '上次更新',
     // 其他设置
     openInNewWindow: '在新窗口打开',
     toggleColorMode: '切换颜色模式',
@@ -51,10 +56,10 @@ export const themeLocales = {
     ],
     // 仓库相关
     // docsRepo: '',
-    // contributors: true,
-    // editLinkText: '在 GitHub 上编辑此页',
-    // contributorsText: '贡献者',
-    // lastUpdatedText: '上次更新',
+    contributors: true,
+    editLinkText: '在 GitHub 上编辑此页',
+    contributorsText: '贡献者',
+    lastUpdatedText: '上次更新',
     // 其他设置
     openInNewWindow: '在新窗口打开',
     toggleColorMode: '切换颜色模式',

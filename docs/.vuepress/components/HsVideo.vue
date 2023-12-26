@@ -25,7 +25,7 @@ import { computed, onMounted } from 'vue'
 const props = defineProps({
   url: {
     type: String,
-    default: '/images/video.mp4'
+    default: '/github-actions/images/video.mp4'
   },
   wrapperStyle: {
     type: Object,

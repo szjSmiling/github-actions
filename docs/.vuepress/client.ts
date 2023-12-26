@@ -7,7 +7,8 @@ export default defineClientConfig({
     HsLayout
   },
   enhance({ app, router, siteData }) {
-    app.component('HsVideo', HsVideo)
+    // 这里的组件注册, 是静态引入
+    // app.component('HsVideo', HsVideo)
   },
   setup() {
     

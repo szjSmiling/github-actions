@@ -1,20 +1,30 @@
 {
-  "name": "github-actions",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+  "name": "dt-docpress",
+  "version": "1.0.0",
+  "author": "Hisun",
+  "description": "个人博客, 一个前端小菜鸟的成长日志",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "homepage": "https://github.com/szjSmiling/github-actions",
+  "bugs": {
+    "url": "https://github.com/szjSmiling/github-actions/issues"
   },
-  "dependencies": {
-    "vue": "^3.3.11"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szjSmiling/github-actions"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.5.2",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.8",
-    "vue-tsc": "^1.8.25"
+    "@vuepress/client": "2.0.0-rc.0",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.0",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.0",
+    "@vuepress/plugin-register-components": "2.0.0-rc.0",
+    "vue": "^3.3.13",
+    "vuepress": "2.0.0-rc.0"
   }
 }

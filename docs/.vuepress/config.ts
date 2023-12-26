@@ -1,15 +1,20 @@
 import { defineUserConfig } from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { customTheme } from './config/config-theme'
-
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { resolve } from 'path'
 
 export default defineUserConfig({
-  base: '/',
+  base: '/github-actions/',
   lang: 'zh-CN',
   title: 'DTSim',
   description: 'DTSim项目帮助文档',
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/images/vite.svg' }]
+    [
+      'link',
+      { rel: 'icon', type: 'image/svg+xml', href: '/images/vite.svg' }
+    ]
   ],
   // dev 配置项
   host: '0.0.0.0',
@@ -72,6 +77,15 @@ export default defineUserConfig({
             },
           },
         }
+      }
+    }),
+    googleAnalyticsPlugin({
+      id: 'G-XXXXXXXXXX'
+    }),
+    registerComponentsPlugin({
+      // 动态导入
+      components: {
+        HsVideo: resolve(__dirname, './components/HsVideo.vue')
       }
     })
   ]
