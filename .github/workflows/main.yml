@@ -11,7 +11,7 @@ on:
 
 jobs:
   # 任务名称
-  build-and-deploy:
+  Publish And Deploy Demo:
     runs-on: ubuntu-latest
     steps:
     # 下载源码
