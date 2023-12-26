@@ -8,8 +8,8 @@ import { resolve } from 'path'
 export default defineUserConfig({
   base: '/github-actions/',
   lang: 'zh-CN',
-  title: 'DTSim',
-  description: 'DTSim项目帮助文档',
+  title: 'Hisun',
+  description: '项目帮助文档',
   head: [
     [
       'link',

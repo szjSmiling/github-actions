@@ -16,10 +16,12 @@ export const locales = {
 // 主题 locales 通用配置
 export const themeLocalesCommon = {
   docsDir: 'docs',
+  docsBranch: 'main',
   logo: '/images/hero.png',
   editLink: false,
   repo: 'https://github.com/szjSmiling/github-actions/',
   // repoLabel: 'GitHub',
+  sidebarDepth: 3
 }
 // 主题 locales 配置
 export const themeLocales = {
