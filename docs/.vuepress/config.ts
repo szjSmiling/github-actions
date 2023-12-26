@@ -6,7 +6,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { resolve } from 'path'
 
 export default defineUserConfig({
-  base: '/',
+  base: '/github-actions/',
   lang: 'zh-CN',
   title: 'DTSim',
   description: 'DTSim项目帮助文档',

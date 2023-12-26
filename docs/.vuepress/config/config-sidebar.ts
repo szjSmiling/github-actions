@@ -1,11 +1,19 @@
 import type { SidebarConfig } from 'vuepress'
 
 interface Sidebar {
+  '': SidebarConfig,
   'zh': SidebarConfig,
   'en': SidebarConfig,
 }
 // 侧边栏数据
 export const sidebar:Sidebar = {
+  '': {
+    '/': [
+      {
+        text: '首页'
+      }
+    ]
+  },
   'zh': {
     '/zh/': [
       {
