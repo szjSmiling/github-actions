@@ -21,12 +21,13 @@ export const themeLocalesCommon = {
   editLink: false,
   repo: 'https://github.com/szjSmiling/github-actions/',
   // repoLabel: 'GitHub',
-  sidebarDepth: 3
+  // sidebarDepth: 3
 }
 // 主题 locales 配置
 export const themeLocales = {
   '/': {
     selectLanguageText: '选择语言',
+    selectLanguageName: '啊啊',
     selectLanguageAriaLabel: '选择语言',
     navbar: navbar.zh, // 导航栏
     // 仓库设置

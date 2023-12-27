@@ -1,0 +1,16 @@
+{
+  "name": "hisun-module1",
+  "version": "1.0.0",
+  "description": "自己的第一个依赖包",
+  "main": "index.js",
+  "keywords": ["module", "Hisun"],
+  "type": "module",
+  "files": [
+    "libs"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hisun",
+  "license": "ISC"
+}

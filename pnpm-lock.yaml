@@ -17,6 +17,9 @@ devDependencies:
   '@vuepress/plugin-register-components':
     specifier: 2.0.0-rc.0
     version: 2.0.0-rc.0
+  hisun-module1:
+    specifier: file:./custom-modules/module1
+    version: file:custom-modules/module1
   vue:
     specifier: ^3.3.13
     version: 3.3.13
@@ -2165,4 +2168,9 @@ packages:
   /yaml@2.3.4:
     resolution: {integrity: sha512-8aAvwVUSHpfEqTQ4w/KMlf3HcRdt50E5ODIQJBw1fQ5RL34xabzxtUlzTXVqc4rkZsPbvrXKWnABCD7kWSmocA==, tarball: https://registry.npmmirror.com/yaml/-/yaml-2.3.4.tgz}
     engines: {node: '>= 14'}
+    dev: true
+
+  file:custom-modules/module1:
+    resolution: {directory: custom-modules/module1, type: directory}
+    name: hisun-module1
     dev: true

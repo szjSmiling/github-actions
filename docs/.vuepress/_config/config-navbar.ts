@@ -1,17 +1,13 @@
 import type { NavbarConfig } from 'vuepress'
 
 interface Navbar {
-  '/': NavbarConfig,
   'zh': NavbarConfig,
   'en': NavbarConfig,
 }
-// 侧边栏数据
+// 导航栏数据
 export const navbar:Navbar = {
-  '/': [
-    { text: '指南', link: '/zh/guide/' },
-  ],
   'zh': [
-    { text: '指南', link: '/zh/guide/' },
+    { text: '指南', link: '/zh/指南/' },
     // {
     //   text: '项目开发者',
     //   children: [

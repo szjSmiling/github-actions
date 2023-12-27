@@ -1,19 +1,20 @@
 import { defineUserConfig } from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { customTheme } from './config/config-theme'
+import { customTheme } from './_config/config-theme'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { resolve } from 'path'
 
+const baseUrl = '/github-actions/'
 export default defineUserConfig({
-  base: '/github-actions/',
+  base: baseUrl,
   lang: 'zh-CN',
   title: 'Hisun',
   description: '项目帮助文档',
   head: [
     [
       'link',
-      { rel: 'icon', type: 'image/svg+xml', href: '/images/vite.svg' }
+      { rel: 'icon', type: 'image/svg+xml', href: `${baseUrl}images/vite.svg` }
     ]
   ],
   // dev 配置项

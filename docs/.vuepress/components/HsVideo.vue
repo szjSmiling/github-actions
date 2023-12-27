@@ -26,7 +26,7 @@ import { withBase } from '@vuepress/client'
 const props = defineProps({
   url: {
     type: String,
-    default: withBase('/images/video.mp4')
+    default: withBase('/videos/video.mp4')
   },
   wrapperStyle: {
     type: Object,
