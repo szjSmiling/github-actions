@@ -1,0 +1,1 @@
+import{_ as o,r as n,o as t,c,a as s}from"./app-b2RXufyj.js";const r={};function _(a,l){const e=n("HsVideo");return t(),c("div",null,[s(e)])}const i=o(r,[["render",_],["__file","index.html.vue"]]);export{i as default};

@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-10f50dac","path":"/zh/%E6%8C%87%E5%8D%97/","title":"介绍","lang":"zh-CN","frontmatter":{"title":"介绍","date":"yyyy-MM-dd"},"headers":[],"git":{"updatedTime":1703575344000,"contributors":[{"name":"Hisun","email":"sunzhongjie@haier.com","commits":1}]},"filePathRelative":"zh/指南/README.md"}');export{t as data};

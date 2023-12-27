@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-7a1aed1c","path":"/zh/%E6%8C%87%E5%8D%97/getting-started-vue.html","title":"快速开始 - vue","lang":"zh-CN","frontmatter":{"title":"快速开始 - vue"},"headers":[],"git":{"updatedTime":1703575344000,"contributors":[{"name":"Hisun","email":"sunzhongjie@haier.com","commits":1}]},"filePathRelative":"zh/指南/getting-started-vue.md"}');export{t as data};
