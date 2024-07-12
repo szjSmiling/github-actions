@@ -1,0 +1,1 @@
+import{_ as n,r as t,o as c,c as s,b as _,a as e}from"./app-D7lK0ST_.js";const a={},l=e("blockquote",null,[e("p",null,"介绍视频")],-1);function r(d,i){const o=t("HsVideo");return c(),s("div",null,[l,_(o)])}const u=n(a,[["render",r],["__file","index.html.vue"]]);export{u as default};

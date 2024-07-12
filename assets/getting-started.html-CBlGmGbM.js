@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-259c62e1","path":"/en/guide/getting-started.html","title":"start quickly","lang":"en-US","frontmatter":{"title":"start quickly"},"headers":[],"git":{"updatedTime":1703575344000,"contributors":[{"name":"Hisun","email":"sunzhongjie@haier.com","commits":1}]},"filePathRelative":"en/guide/getting-started.md"}');export{t as data};

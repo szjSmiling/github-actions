@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-64e7350b","path":"/zh/%E6%8C%87%E5%8D%97/getting-started.html","title":"快速开始","lang":"zh-CN","frontmatter":{"title":"快速开始","pageClass":"custom-page-class"},"headers":[],"git":{"updatedTime":1720748790000,"contributors":[{"name":"Hisun","email":"sunzhongjie@haier.com","commits":2}]},"filePathRelative":"zh/指南/getting-started.md"}');export{t as data};

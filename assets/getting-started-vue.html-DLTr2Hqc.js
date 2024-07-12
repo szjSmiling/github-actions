@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-b1de4770","path":"/en/guide/getting-started-vue.html","title":"start quickly - vue","lang":"en-US","frontmatter":{"title":"start quickly - vue"},"headers":[],"git":{"updatedTime":1703575344000,"contributors":[{"name":"Hisun","email":"sunzhongjie@haier.com","commits":1}]},"filePathRelative":"en/guide/getting-started-vue.md"}');export{e as data};
