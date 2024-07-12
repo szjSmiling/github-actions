@@ -1,8 +1,8 @@
 ---
 title: 介绍
-date: yyyy-MM-dd
+pageClass: custom-page-class
 ---
 
 
-
+> 介绍视频
 <HsVideo />

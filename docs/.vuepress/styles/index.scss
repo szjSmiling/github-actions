@@ -2,5 +2,13 @@
   scroll-behavior: smooth;
 }
 .theme-container.custom-page-class {
-  height: 100vh;
+  main.page{
+    box-sizing: border-box;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .theme-default-content{
+    max-height: calc(100vh - var(--navbar-height) - 2rem - 3.8rem - 4rem - 3rem); 
+    overflow: auto;
+  }
 }

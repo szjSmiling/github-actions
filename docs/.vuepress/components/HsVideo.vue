@@ -23,6 +23,7 @@
 <script lang='ts' setup>
 import { computed, onMounted } from 'vue'
 import { withBase } from '@vuepress/client'
+
 const props = defineProps({
   url: {
     type: String,

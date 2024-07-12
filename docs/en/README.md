@@ -1,7 +1,7 @@
 ---
 home: true
 pageClass: custom-page-class
-heroImage: https://terramours.site/images/hero.png
+heroImage: /images/vite.svg
 heroText: TerraMours
 tagline: welcome to use the website
 actions: 
@@ -9,7 +9,7 @@ actions:
     link: /en/guide/
     type: primary
   - text: demo website
-    link: http://localhost:8080/en/
+    link: http://localhost:8080/
     type: secondary
 features:
   - title: 简洁高效

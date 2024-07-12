@@ -4,7 +4,6 @@ import { locales, themeLocales, themeLocalesCommon } from './config-locales'
 export const customTheme = () => {
   return {
     locales: locales,
-    
     theme: defaultTheme({
       ...themeLocalesCommon,
       locales: themeLocales
