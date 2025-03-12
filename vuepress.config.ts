@@ -16,12 +16,12 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: "Hisun's Blob Docs",
   description: '学习搭建个人博客文档',
-  // head: [
-  //   [
-  //     'link',
-  //     { rel: 'icon', type: 'shortcut icon', href: `${VITE_BASE_URL}icon/favicon.ico` }
-  //   ]
-  // ],
+  head: [
+    [
+      'link',
+      { rel: 'icon', type: 'shortcut icon', href: `${VITE_BASE_URL}icon/favicon.ico` }
+    ]
+  ],
   pagePatterns: ['**/*.md', '!**/README.md', '!.vuepress', '!node_modules'],
   // dev 配置项
   host: '0.0.0.0',
