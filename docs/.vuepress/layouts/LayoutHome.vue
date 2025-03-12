@@ -10,17 +10,19 @@ onMounted(() => {
 })
 </script>
 <template>
-  <ParentLayout class="home-layout custom-layout">
-    <template #navbar>
-      <div class="my-navbar"></div>
-    </template>
-    <template #page>
-      <slot name="page"></slot>
-    </template>
-    <template #page-bottom>
-      <!-- <div class="my-footer">footer</div> -->
-    </template>
-  </ParentLayout>
+  <ClientOnly>
+    <ParentLayout v-if="isLogin" class="home-layout custom-layout">
+      <template #navbar>
+        <div class="my-navbar"></div>
+      </template>
+      <template #page>
+        <slot name="page"></slot>
+      </template>
+      <template #page-bottom>
+        <!-- <div class="my-footer">footer</div> -->
+      </template>
+    </ParentLayout>
+  </ClientOnly>
 </template>
 <style lang="scss">
 

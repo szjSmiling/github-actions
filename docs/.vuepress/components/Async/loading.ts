@@ -15,9 +15,11 @@ export default function (options = {} as any) {
   const { isAnt = false }  = options
   const container = document.createElement('div')
   container.className = 'hs-loading-container'
-   const destroy = () => {
+  const destroy = () => {
     render(null, container)
-    document.body.removeChild(container)
+    if (document.body.contains(container)) {
+      document.body.removeChild(container)
+    }
     // console.log('HsLoading销毁了');
   }
   let ModalComponent = null as ReturnType<any>

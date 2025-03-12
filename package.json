@@ -26,6 +26,7 @@
     "@types/qs": "^6.9.11",
     "@vicons/ionicons5": "^0.13.0",
     "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "@vuepress/client": "2.0.0-rc.2",
     "@vuepress/theme-default": "2.0.0-rc.82",
     "@vuepress/utils": "2.0.0-rc.20",
     "dotenv": "^16.4.5",

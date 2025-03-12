@@ -62,35 +62,37 @@ const goDashboard = () => {
 }
 </script>
 <template>
-  <ParentLayout>
-    <template #navbar-before>
-      <!-- <div class="my-footer">navbar</div> -->
-    </template>
-    <template #navbar-after>
-      <ClientOnly>
-        <div v-if="isAdmin" class="custom-navbar my-dashboard" title="数据面板"
-          @mouseleave="mouseleave('dashboard')" @mouseenter="mouseenter('dashboard')" @click="goDashboard">
-          <img :src="imageInfo.dashboard" />
+  <ClientOnly>
+    <ParentLayout v-if="isLogin">
+      <template #navbar-before>
+        <!-- <div class="my-footer">navbar</div> -->
+      </template>
+      <template #navbar-after>
+        <ClientOnly>
+          <div v-if="isAdmin" class="custom-navbar my-dashboard" title="数据面板"
+            @mouseleave="mouseleave('dashboard')" @mouseenter="mouseenter('dashboard')" @click="goDashboard">
+            <img :src="imageInfo.dashboard" />
+          </div>
+        </ClientOnly>
+        <div class="custom-navbar my-logout" title="退出登录"
+          @mouseleave="mouseleave('logout')" @mouseenter="mouseenter('logout')" @click="logout">
+          <img :src="imageInfo.logout" />
         </div>
-      </ClientOnly>
-      <div class="custom-navbar my-logout" title="退出登录"
-        @mouseleave="mouseleave('logout')" @mouseenter="mouseenter('logout')" @click="logout">
-        <img :src="imageInfo.logout" />
-      </div>
-    </template>
-    <template #sidebar >
-      <slot name="sidebar"></slot>
-    </template>
-    <template #page >
-      <slot name="page"></slot>
-    </template>
-    <!-- <template #page-bottom>
-      <div class="my-footer">footer</div>
-    </template> -->
-    <!-- <template #page-bottom>
-      <div class="my-footer">footer</div>
-    </template> -->
-  </ParentLayout>
+      </template>
+      <template #sidebar >
+        <slot name="sidebar"></slot>
+      </template>
+      <template #page >
+        <slot name="page"></slot>
+      </template>
+      <!-- <template #page-bottom>
+        <div class="my-footer">footer</div>
+      </template> -->
+      <!-- <template #page-bottom>
+        <div class="my-footer">footer</div>
+      </template> -->
+    </ParentLayout>
+  </ClientOnly>
 </template>
 <style lang='scss' scoped>
 .custom-navbar{

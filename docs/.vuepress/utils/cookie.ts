@@ -28,9 +28,9 @@ export function cookieSetToken ({ type, token: value }: any, btoa: boolean = fal
     const now = new Date().getTime() + 60 * 60 * 1000 * 24
     Cookies.set(TOKEN, value, { expires: new Date(now) })
     // 登录日志
-    const isAdmin = storageGet('_HR_ISADMIN')
+    // const isAdmin = storageGet('_HR_ISADMIN')
     // console.log('....roleMap', typeof type, type, roleMap[type], isAdmin)
-    const userRole = Number(type) === 1 && isAdmin ? '系统管理员' : roleMap[type]
+    // const userRole = Number(type) === 1 && isAdmin ? '系统管理员' : roleMap[type]
   }
 }
 

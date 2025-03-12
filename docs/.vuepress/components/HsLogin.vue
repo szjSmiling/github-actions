@@ -1,92 +1,88 @@
 <template>
-  <div class="login border-box m0-p0">
-    <div class="left">
-      <img
-        :class="['bg-login', isBgLoading && 'is-loading']"
-        src="/images/login/login.png"
-        @load="isBgLoading = false"
-        @click.prevent.stop
-        alt="" />
-      <img
-        class="logo"
-        src="/images/logo.png"
-        @click.prevent.stop />
-    </div>
-    <div class="right" id="login_right_content">
-      <n-form
-        ref="loginForm"
-        class="form"
-        :model="formModel"
-        :rules="rules"
-        label-placement="top"
-        label-width="60px"
-        :show-require-mark="false"
-      >
-        <img class="mobile-logo" src="/images/logo.png"/>
-        <h1 class="title">登 录</h1>
-        <n-form-item
-          label="用户名"
-          path="username"
+  <ClientOnly>
+    <div class="login border-box m0-p0">
+      <div class="left">
+        <img
+          :class="['bg-login', isBgLoading && 'is-loading']"
+          src="/images/login/login.png"
+          @load="isBgLoading = false"
+          @click.prevent.stop
+          alt="" />
+        <img
+          class="logo"
+          src="/images/logo.png"
+          @click.prevent.stop />
+      </div>
+      <div class="right" id="login_right_content">
+        <n-form
+          ref="loginForm"
+          class="form"
+          :model="formModel"
+          :rules="rules"
+          label-placement="top"
+          label-width="60px"
+          :show-require-mark="false"
         >
-          <n-input
-            class="text"
-            v-model:value="formModel.username"
-            allowClear
-            placeholder="请输入用户名"
+          <img class="mobile-logo" src="/images/logo.png"/>
+          <h1 class="title">登 录</h1>
+          <n-form-item
+            label="用户名"
+            path="username"
           >
-            <template #prefix>
-              <img src="/images/login/icon-user.png" />
-            </template>
-          </n-input>
-        </n-form-item>
-        <n-form-item
-          class="pwd-form-item"
-          label="密码"
-          path="password"
-        >
-          <n-input
-            class="text"
-            v-model:value="formModel.password"
-            :type="pwdType"
-            allowClear
-            placeholder="请输入密码"
-            @keyup="pwdKeyupHandle"
+            <n-input
+              class="text"
+              v-model:value="formModel.username"
+              allowClear
+              placeholder="请输入用户名"
+            >
+              <template #prefix>
+                <img src="/images/login/icon-user.png" />
+              </template>
+            </n-input>
+          </n-form-item>
+          <n-form-item
+            class="pwd-form-item"
+            label="密码"
+            path="password"
           >
-            <template #prefix>
-              <img src="/images/login/icon-password.png" />
-            </template>
-            <template #suffix>
-              <img
-                v-show="!pwdType"
-                src="/images/login/icon-hide.png"
-                style="cursor: pointer;"
-                @click.stop.prevent="changePwdType"
-              />
-              <img
-                v-show="pwdType"
-                src="/images/login/icon-show.png"
-                style="cursor: pointer;"
-                @click.stop.prevent="changePwdType"
-              />
-            </template>
-          </n-input>
-        </n-form-item>
-        <n-form-item class="btn-form-item btn-form-item-up" :show-label="false" :show-feedback="false">
-          <n-button class="btn" type="primary" @click="loginWithUP">
-            <n-spin :show="loading">
-              {{ btnText }}
-            </n-spin>
-          </n-button>
-        </n-form-item>
-        <n-form-item class="btn-form-item btn-form-item-uuc" :show-label="false" :show-feedback="false">
-          <span v-if="isUucLogin" class="btn-last-login">上次登录</span>
-          <n-button class="btn" type="primary" :loading="loadingUuc" @click.enter="loginWithUUC">
-            {{ btnUccText }}
-          </n-button>
-        </n-form-item>
-      </n-form>
+            <n-input
+              class="text"
+              v-model:value="formModel.password"
+              :type="pwdType"
+              allowClear
+              placeholder="请输入密码"
+              @keyup="pwdKeyupHandle"
+            >
+              <template #prefix>
+                <img src="/images/login/icon-password.png" />
+              </template>
+              <template #suffix>
+                <img
+                  v-show="!pwdType"
+                  src="/images/login/icon-hide.png"
+                  style="cursor: pointer;"
+                  @click.stop.prevent="changePwdType"
+                />
+                <img
+                  v-show="pwdType"
+                  src="/images/login/icon-show.png"
+                  style="cursor: pointer;"
+                  @click.stop.prevent="changePwdType"
+                />
+              </template>
+            </n-input>
+          </n-form-item>
+          <n-form-item class="btn-form-item btn-form-item-up" :show-label="false" :show-feedback="false">
+            <n-button class="btn" type="primary" @click="loginWithUP">
+              <n-spin :show="loading">
+                {{ btnText }}
+              </n-spin>
+            </n-button>
+          </n-form-item>
+        </n-form>
+      </div>
     </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup>
@@ -100,9 +96,9 @@ import { storageGet } from '@/utils/storage.ts'
 // const naiveMessage = window.$message ?? useMessage()
 const router = useRouter();
 const ud = "admin";
-const pd = "123465";
-const username = import.meta.env.DEV ? ud : "";
-const password = import.meta.env.DEV ? pd : "";
+const pd = "123456";
+const username = import.meta.env.DEV ? ud : ud;
+const password = import.meta.env.DEV ? pd : pd;
 const rules = {
   username: [{ required: true, message: "请输入用户名", trigger: ["input", "blur"] }],
   password: [
@@ -122,7 +118,7 @@ const formModel = reactive({
 const isBgLoading = ref(true);
 const loginForm = ref(null);
 const pwdType = ref("password");
-const loginType = ref(1);
+const loginType = ref(0);
 const isUucLogin = ref(false)
 const loading = ref(false);
 const btnText = computed(() => (loading.value ? "登录中..." : "登 录"));
@@ -138,15 +134,17 @@ const pwdKeyupHandle = (ev) => {
   if (ev.keyCode !== 13) return
   formSubmit()
 }
-const formSubmit = () => {
-  if (loading.value) return;
-  loading.value = true;
+const formSubmit = __throttle(() => {
   loginForm.value
     .validate(async (errors) => {
-      // console.log('errors', errors, loginType.value)
+      if (!!errors) {
+        loading.value = false;
+        return
+      }
+      loading.value = true;
       // 临时登录, 目前暂不使用
       if (loginType.value === 0) {
-        if (errors || ud !== formModel.username || pd !== formModel.password) {
+        if (ud !== formModel.username || pd !== formModel.password) {
           loading.value = false;
           // naiveMessage.error({
           //   content: "用户/密码错误",
@@ -167,7 +165,7 @@ const formSubmit = () => {
       }
       loading.value = false;
     })
-};
+}, 1000, { leading: true })
 
 // 普通用户登录
 const loginWithUP = __throttle(() => {

@@ -5,8 +5,10 @@ import { registerComponents, registerLayouts } from '@/components/registerCompon
 import { registerRoutes } from '@/components/registerRoutes'
 import { isAuthenticated, cookieGetToken, cookieSetToken } from '@/utils/cookie.ts'
 import { storageSet, storageGet } from '@/utils/storage.ts'
+import { delayTimeout } from '@/utils/tool.ts'
 import vuePkg from "vue/package.json"
 import vuepressPkg from "vuepress/package.json"
+import fullLoading from '@/components/Async/loading.ts'
 
 function nextHandler (next:any, path?:string|boolean) {
   if (path) {
@@ -29,10 +31,13 @@ let _HR_router:any
 export default defineClientConfig({
   rootComponents: [], // 放置全局UI组件之类, 如: 全局弹窗/全局loading
   layouts: { ...registerLayouts() },
-  enhance({ app, router, siteData }) {
+  async enhance({ app, router, siteData }) {
+    app.config.devtools = false
     _HR_router = router
     // registerRoutes(router)
     if (!import.meta.env.SSR) {
+      const loading = fullLoading()
+      await delayTimeout()
       registerComponents(app)
       router.beforeEach(async (to:any, from, next) => {
         const isLogin = isAuthenticated()
@@ -42,18 +47,20 @@ export default defineClientConfig({
         }
         nextHandler(next)
       })
-      // router.afterEach(async (to, from, failure) => {
-      //   console.log('....afterEach');
-      // })
-      // router.onError((err:Error) => {
-      //   console.error('....router error: ', err.message);
-      // })
+      router.afterEach(async (to, from, failure) => {
+        // console.log('....afterEach');
+        loading.destroy()
+      })
+      router.onError((err:Error) => {
+        // console.error('....router error: ', err.message);
+        loading.destroy()
+      })
     }
   },
   setup() {
     onBeforeMount(() => {
       console.log(`欢迎访问~~`)
-      window._HR_router = _HR_router
+      // window._HR_router = _HR_router
     })
   },
 })
