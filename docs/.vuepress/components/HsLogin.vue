@@ -1,88 +1,86 @@
 <template>
-  <ClientOnly>
-    <div class="login border-box m0-p0">
-      <div class="left">
-        <img
-          :class="['bg-login', isBgLoading && 'is-loading']"
-          src="/images/login/login.png"
-          @load="isBgLoading = false"
-          @click.prevent.stop
-          alt="" />
-        <img
-          class="logo"
-          src="/images/logo.png"
-          @click.prevent.stop />
-      </div>
-      <div class="right" id="login_right_content">
-        <n-form
-          ref="loginForm"
-          class="form"
-          :model="formModel"
-          :rules="rules"
-          label-placement="top"
-          label-width="60px"
-          :show-require-mark="false"
-        >
-          <img class="mobile-logo" src="/images/logo.png"/>
-          <h1 class="title">登 录</h1>
-          <n-form-item
-            label="用户名"
-            path="username"
-          >
-            <n-input
-              class="text"
-              v-model:value="formModel.username"
-              allowClear
-              placeholder="请输入用户名"
-            >
-              <template #prefix>
-                <img src="/images/login/icon-user.png" />
-              </template>
-            </n-input>
-          </n-form-item>
-          <n-form-item
-            class="pwd-form-item"
-            label="密码"
-            path="password"
-          >
-            <n-input
-              class="text"
-              v-model:value="formModel.password"
-              :type="pwdType"
-              allowClear
-              placeholder="请输入密码"
-              @keyup="pwdKeyupHandle"
-            >
-              <template #prefix>
-                <img src="/images/login/icon-password.png" />
-              </template>
-              <template #suffix>
-                <img
-                  v-show="!pwdType"
-                  src="/images/login/icon-hide.png"
-                  style="cursor: pointer;"
-                  @click.stop.prevent="changePwdType"
-                />
-                <img
-                  v-show="pwdType"
-                  src="/images/login/icon-show.png"
-                  style="cursor: pointer;"
-                  @click.stop.prevent="changePwdType"
-                />
-              </template>
-            </n-input>
-          </n-form-item>
-          <n-form-item class="btn-form-item btn-form-item-up" :show-label="false" :show-feedback="false">
-            <n-button class="btn" type="primary" @click="loginWithUP">
-              <n-spin :show="loading">
-                {{ btnText }}
-              </n-spin>
-            </n-button>
-          </n-form-item>
-        </n-form>
-      </div>
+  <div class="login border-box m0-p0">
+    <div class="left">
+      <img
+        :class="['bg-login', isBgLoading && 'is-loading']"
+        src="/images/login/login.png"
+        @load="isBgLoading = false"
+        @click.prevent.stop
+        alt="" />
+      <img
+        class="logo"
+        src="/images/logo.png"
+        @click.prevent.stop />
     </div>
-  </ClientOnly>
+    <div class="right" id="login_right_content">
+      <n-form
+        ref="loginForm"
+        class="form"
+        :model="formModel"
+        :rules="rules"
+        label-placement="top"
+        label-width="60px"
+        :show-require-mark="false"
+      >
+        <img class="mobile-logo" src="/images/logo.png"/>
+        <h1 class="title">登 录</h1>
+        <n-form-item
+          label="用户名"
+          path="username"
+        >
+          <n-input
+            class="text"
+            v-model:value="formModel.username"
+            allowClear
+            placeholder="请输入用户名"
+          >
+            <template #prefix>
+              <img src="/images/login/icon-user.png" />
+            </template>
+          </n-input>
+        </n-form-item>
+        <n-form-item
+          class="pwd-form-item"
+          label="密码"
+          path="password"
+        >
+          <n-input
+            class="text"
+            v-model:value="formModel.password"
+            :type="pwdType"
+            allowClear
+            placeholder="请输入密码"
+            @keyup="pwdKeyupHandle"
+          >
+            <template #prefix>
+              <img src="/images/login/icon-password.png" />
+            </template>
+            <template #suffix>
+              <img
+                v-show="!pwdType"
+                src="/images/login/icon-hide.png"
+                style="cursor: pointer;"
+                @click.stop.prevent="changePwdType"
+              />
+              <img
+                v-show="pwdType"
+                src="/images/login/icon-show.png"
+                style="cursor: pointer;"
+                @click.stop.prevent="changePwdType"
+              />
+            </template>
+          </n-input>
+        </n-form-item>
+        <n-form-item class="btn-form-item btn-form-item-up" :show-label="false" :show-feedback="false">
+          <n-button class="btn" type="primary" @click="loginWithUP">
+            <n-spin :show="loading">
+              {{ btnText }}
+            </n-spin>
+          </n-button>
+        </n-form-item>
+      </n-form>
+    </div>
+  </div>
 </template>
 
 <script setup>
