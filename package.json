@@ -1,10 +1,11 @@
 {
-  "name": "dt-docpress",
+  "name": "sun-docpress",
   "version": "1.0.0",
   "author": "Hisun",
-  "description": "个人博客, 一个前端小菜鸟的成长日志",
+  "description": "个人博客, 记录学习的生活!",
   "keywords": [],
   "license": "ISC",
+  "type": "module",
   "homepage": "https://github.com/szjSmiling/github-actions",
   "bugs": {
     "url": "https://github.com/szjSmiling/github-actions/issues"
@@ -14,17 +15,32 @@
     "url": "https://github.com/szjSmiling/github-actions"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "dev": "dotenv -e .env.development vuepress dev docs",
+    "build": "dotenv -e .env.production vuepress build docs",
+    "dev:clean": "dotenv -e .env.development vuepress dev docs --clean-cache",
+    "ts": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-rc.0",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.0",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.0",
-    "@vuepress/plugin-register-components": "2.0.0-rc.0",
-    "vue": "^3.3.13",
-    "vuepress": "2.0.0-rc.0",
-    "hisun-module1": "file:./custom-modules/module1"
+    "@types/js-cookie": "^3.0.6",
+    "@types/qs": "^6.9.11",
+    "@vicons/ionicons5": "^0.13.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "@vuepress/theme-default": "2.0.0-rc.82",
+    "@vuepress/utils": "2.0.0-rc.20",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.3.0",
+    "naive-ui": "^2.41.0",
+    "typescript": "^5.3.3",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.20"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "crypto-js": "^4.2.0",
+    "js-cookie": "^3.0.5",
+    "qs": "^6.11.2",
+    "vue-router": "^4.5.0",
+    "xlsx": "^0.18.5"
   }
 }

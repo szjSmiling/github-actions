@@ -1,3 +1,36 @@
 :root {
+  // 修改默认主题颜色配置
   --content-width: 960px;
+  // --c-bg: #219bd8;
+  --c-brand: #219bd8;
+  --c-brand-light: #52b5e7;
+  --c-text-accent: var(--c-brand);
+  // 自定义颜色变量
+  --h-white: #ffffff;
+  --h-gray: #f2f2f4;
+  --h-brand: #428fff;
+  --h-brand-bg: #428fff;
+  --h-border:#1f242e;
+  --h-border-accent:#428fff;
+  --h-title: #1f242e;
+  --h-text-tip: #999999;
+  --h-text: #1f242e;
+  --h-text-light: #428fff;
+  --h-text-lighter: #525866;
+  --h-text-white: #ffffff;
+  --h-text-accent: #428fff;
+  // a
+  --h-link-text: #0099FF;
+  --h-link-bg: #52b5e7;
+  // button
+  --h-btn-text: #ffffff;
+  --h-btn-bg: #0099FF;
+  --h-btn-hover-bg: #428fff;
+  // table
+  --h-table-thead: #1f242e;
+  --h-table-thead-bg: #ededf5;
+  --h-table-tr-text: #525866;
+  --h-table-tr-hover-bg: #EDF7FF;
+  // --h-table-tr-bg: #f5f5f5;
+  --h-table-tr-bg: #f5f5f7;
 }

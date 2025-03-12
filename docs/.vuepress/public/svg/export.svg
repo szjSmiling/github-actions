@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard_受访页面分析" transform="translate(-1796.000000, -137.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="编组" transform="translate(1780.000000, 129.000000)">
+                <g id="Icon/export备份-2" transform="translate(16.000000, 8.000000)">
+                    <path d="M10,1 L12.999,3.999 L13,4 L13,7.47 L15.0048737,9.47487373 L13,11.478 L13,15 L2,15 L2,1 L10,1 Z M8.999,2 L3,2 L3,14 L12,14 L12,13 L13,13 L12.999,11.479 L12.53,11.9497475 L11.8228932,11.2426407 L12.999,10.062 L12.999,9.973 L8.28,9.97487373 L8.28,8.97487373 L12.999,8.973 L12.999,8.884 L11.8228932,7.70710678 L12.53,7 L12.999,7.469 L13,6 L12,6 L12,4.999 L9.999,4.999 L10,5 L9,5 L8.999,2 Z M9.999,2.414 L9.999,3.999 L11.584,3.999 L9.999,2.414 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

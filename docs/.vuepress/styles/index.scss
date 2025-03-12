@@ -1,14 +1,106 @@
+
+@use './custom.scss';
 :root {
   scroll-behavior: smooth;
 }
+$pageML: 15%;
+$heroH: 180px;
+
+/* 自定义首页 */
+.theme-container.custom-layout {
+
+}
+/* 默认首页 */
 .theme-container.custom-page-class {
+  position: relative;
+  overflow: auto;
+  main.home{
+    position: relative;
+    box-sizing: border-box;
+    height: calc(100vh - 3.5rem);
+  }
+  /* 页面内容区域 */
   main.page{
     box-sizing: border-box;
-    max-height: 100vh;
-    overflow: hidden;
+    // max-height: 100vh;
+    // overflow: hidden;
+    .theme-default-content{
+      margin-left: $pageML;
+      // max-height: calc(100vh - var(--navbar-height) - 2rem - 3.8rem - 4rem - 3rem); 
+      // overflow: auto;
+    }
+    .page-meta,
+    .page-nav{
+      margin-left: $pageML;
+    }
   }
-  .theme-default-content{
-    max-height: calc(100vh - var(--navbar-height) - 2rem - 3.8rem - 4rem - 3rem); 
-    overflow: auto;
+}
+
+
+/* 兼容手机端展示 */
+@media screen and (max-width: 950px) {
+  $pageML: 0;
+  $heroH: auto;
+  .theme-container.custom-page-class{
+    main.page{
+      .theme-default-content{
+        margin-left: $pageML;
+      }
+      .page-meta,
+      .page-nav{
+        margin-left: $pageML;
+      }
+    }
+  }
+  .theme-container.custom-layout {
+    main.home {
+      max-width: 100%;
+      .hero img{
+        height: $heroH;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  $pageML: 0;
+  body {
+    // --navbar-height: 80px;
+    // --navbar-padding-v: 28px;
+    // --navbar-padding-h: 28px;
+  }
+}
+
+.ellipsis{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hs-btn-export {
+  padding: 0 16px !important;
+  height: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--h-white);
+  border-radius: 2px;
+  background: var(--h-btn-bg);
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    font-size: 0;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  span {
+    display: inline-block;
+    line-height: 14px;
+  }
+  &:hover {
+    background: var(--h-btn-hover-bg);
   }
 }
